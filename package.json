@@ -1,0 +1,12 @@
+{
+  "name": "crypto-word-search",
+  "version": "1.0.0",
+  "description": "Crypto Word Search Game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

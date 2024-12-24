@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Word Search</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <img src="/Elleven-Kids.png" alt="Game Logo" class="game-logo">
+    <div class="header">
+        <h1>Crypto Word Search</h1>
+        <div class="game-info">
+            <div class="info-box">
+                <span>Tempo: </span><span class="timer">00:00</span>
+            </div>
+            <div class="info-box">
+                <span>Pontuação: </span><span class="score">0</span>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="difficulty-controls">
+                <button class="btn difficulty-btn easy" data-difficulty="easy">Fácil</button>
+                <button class="btn difficulty-btn medium active" data-difficulty="medium">Médio</button>
+                <button class="btn difficulty-btn hard" data-difficulty="hard">Difícil</button>
+            </div>
+            <button class="btn new-game-btn">Novo Jogo</button>
+            <button class="btn toggle-records-btn">Recordes</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="grid-container">
+            <div class="grid"></div>
+        </div>
+        <div class="word-list">
+            <h2>Palavras para encontrar:</h2>
+            <div class="words"></div>
+        </div>
+    </div>
+
+    <div class="records">
+        <h2>Recordes</h2>
+        <div class="records-list"></div>
+    </div>
+
+    <script src="/game.js"></script>
+</body>
+</html>
