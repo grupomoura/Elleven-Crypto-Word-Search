@@ -4,9 +4,21 @@
         {
             "src": "server.js",
             "use": "@vercel/node"
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
+        {
+            "src": "/styles.css",
+            "dest": "/public/styles.css"
+        },
+        {
+            "src": "/game.js",
+            "dest": "/public/game.js"
+        },
         {
             "src": "/assets/(.*)",
             "dest": "/public/assets/$1"

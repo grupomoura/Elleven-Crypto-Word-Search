@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3003;
 
 // Crypto words dictionary
 const CRYPTO_WORDS = {
@@ -43,8 +43,8 @@ const CRYPTO_WORDS = {
     ]
 };
 
-// Serve static files
-app.use(express.static('public'));
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Create grid function
 function createGrid(difficulty = 'medium', size = 15) {
@@ -140,8 +140,18 @@ app.get('/', (req, res) => {
 app.get('/new-game', (req, res) => {
     const difficulty = req.query.difficulty || 'medium';
     const gameData = createGrid(difficulty);
-    console.log('Sending game data:', gameData);
     res.json(gameData);
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
+// Handle 404s
+app.use((req, res) => {
+    res.status(404).send('Not found');
 });
 
 app.listen(port, () => {
