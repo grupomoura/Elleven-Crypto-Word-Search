@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Crossword</title>
+    <link rel="stylesheet" href="crossword-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Crypto Crossword Logo" class="game-logo">
+        </div>
+
+        <div class="game-container">
+            <div class="info">
+                <div class="timer">00:00</div>
+                <div class="level">Nível: Fácil</div>
+            </div>
+
+            <div class="controls">
+                <div class="difficulty-controls">
+                    <button class="btn difficulty-btn active" data-difficulty="easy">FÁCIL</button>
+                    <button class="btn difficulty-btn" data-difficulty="medium">MÉDIO</button>
+                    <button class="btn difficulty-btn" data-difficulty="hard">DIFÍCIL</button>
+                </div>
+                <button class="btn new-game-btn" onclick="initGame()">NOVO JOGO</button>
+                <button class="btn toggle-records-btn" onclick="showRecords()">RECORDES</button>
+            </div>
+
+            <div class="game-area">
+                <div class="crossword-grid"></div>
+                <div class="clues">
+                    <div class="horizontal">
+                        <h3>Horizontais</h3>
+                    </div>
+                    <div class="vertical">
+                        <h3>Verticais</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="records">
+            <div class="records-container">
+                <h2>Melhores Tempos</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="crossword.js"></script>
+</body>
+</html>

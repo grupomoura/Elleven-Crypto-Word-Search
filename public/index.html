@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Word Search</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="sounds.js" defer></script>
 </head>
 <body>
-    <img src="/assets/Elleven-Kids.png" alt="Game Logo" class="game-logo" style="width: 100px;">
+    <img src="Elleven-Kids.png" alt="Game Logo" class="game-logo" style="width: 100px;">
     <div class="header">
         <h1>Crypto Word Search</h1>
         <div class="game-info">
@@ -38,6 +40,12 @@
         </div>
     </div>
     <button onclick="newGame()">Novo Jogo</button>
+
+    <div class="settings">
+        <button id="toggleSound" class="settings-btn">
+            <span class="icon">🔊</span>
+        </button>
+    </div>
 
     <script>
         // Verificação de dispositivo móvel
